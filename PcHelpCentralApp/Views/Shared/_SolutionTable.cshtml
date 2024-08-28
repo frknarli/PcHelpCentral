@@ -1,0 +1,61 @@
+﻿<div class="row">
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <style>
+                    table {
+                        color: white;
+                    }
+
+                        table tr td, table tr th {
+                            background-color: rgba(0, 0, 0, 0.3) !important;
+                        }
+                </style>
+                <tr>
+                    <th class="text-white">Image</th>
+                    <th class="text-white">Question</th>
+                    <th class="text-white">Solution</th>
+                    <th class="text-white">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Solution prd in Model.Solutions)
+                {
+
+                    <tr onclick="window.location.href='@Url.Action("Get", "Solution", new { id = prd.SolutionId })'">
+                        <td>
+                            
+                            <img class="border border-light rounded" src="@prd?.ImageUrl" alt="@prd?.SolutionText"
+                                     width="200" />
+                            
+                        </td>
+                        <td class="text-white">@prd.Question</td>
+                        <td class="text-white">@prd.SolutionText</td>
+                        <td class="text-white">@prd.Date.ToString("MM/dd/yyyy")</td>
+                    </tr>
+
+
+                }
+            </tbody>
+        </table>
+
+        <div class="text-center">
+            <div page-model="@Model?.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn"
+                 page-class-normal="btn-outline-dark" page-class-selected="btn-secondary" class="btn-group">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+}

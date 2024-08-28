@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PC Help Central - @ViewData["Title"]</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <partial name="LinksAndScripts/Links.cshtml" />
+</head>
+<body>
+    <header>
+
+        <partial name="_Navbar" />
+        @RenderSection("Header",false)
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        @RenderSection("Footer",false)
+        <partial name="_Footer" />
+    </footer>
+
+    <partial name="LinksAndScripts/Scripts.cshtml" />
+    @await RenderSectionAsync("Scripts",required:false)
+
+</body>
+</html>

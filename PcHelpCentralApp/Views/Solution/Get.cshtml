@@ -1,0 +1,25 @@
+﻿@model Solution
+@{
+    Layout = "_Layout1";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body style="background-color: lightgray">
+    
+    <div>
+            <p>
+             <h5>
+            <strong>@Model.Question</strong>
+            <strong>@Model.Date.ToString("MM/dd/yyyy")</strong>
+            </h5>
+            <div>
+                    @Html.Raw(Model.Content)
+            </div>
+            </p>
+    
+    </div>
+</body>
+</html>

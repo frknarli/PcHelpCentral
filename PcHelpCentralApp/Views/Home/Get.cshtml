@@ -1,0 +1,11 @@
+﻿@model SolutionListViewModel
+
+
+<div class="text-center">
+    @await Component.InvokeAsync("SolutionFilterMenu")
+</div>
+
+<div>
+    <partial name="_SolutionTable" />
+</div>
+

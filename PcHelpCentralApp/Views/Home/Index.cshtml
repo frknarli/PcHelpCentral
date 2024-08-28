@@ -1,0 +1,25 @@
+﻿<div>
+     <div class="text-center">
+         @await Component.InvokeAsync("SolutionFilterMenu")
+     </div>
+</div>
+
+
+<div class="row mt-5">
+    <div class="text-center">
+        <h2 style="font-family: 'Poppins', sans-serif; color: #ffffff;">Trends</h2>
+    </div>
+    @foreach (var prd in Model.Solutions)
+    {
+        <partial name="_ProductCard" model="prd" />
+    }
+</div>
+
+<div class="text-center">
+    <div page-model="@Model?.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn"
+         page-class-normal="btn-outline-dark" page-class-selected="btn-secondary" class="btn-group">
+    </div>
+</div>
+
+
+

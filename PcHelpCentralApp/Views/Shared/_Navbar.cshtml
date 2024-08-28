@@ -1,0 +1,30 @@
+﻿<nav class="navbar border-body navbar-expand-lg navbar-dark" style="background-color: #000000;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <h1 style="font-family: 'Redressed', cursive; color: white;">Computer Help Central</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class= "navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-controller="Solution" asp-action="Index">QUESTIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-page="/Contact">CONTACT</a>
+                </li>
+                <partial name="_LoginMenu" />          
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+

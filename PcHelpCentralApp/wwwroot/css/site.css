@@ -1,0 +1,230 @@
+﻿
+.nav-item {
+    font-size: 18px;
+}
+
+.nav-link {
+    margin-left: 30px;
+}
+
+
+/* Navbar linklerinin üzerine gelindiğinde renk değiştir */
+.nav-item a.nav-link:hover {
+    color: #ff0000; 
+}
+
+.navbar-nav {
+    gap: 0px;
+}
+
+
+.body {
+    height: 100vh;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 50px;
+    max-width: 500px; /* Change to max-width for responsiveness */
+    width: 100%; /* Use 100% width for responsiveness */
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-left: auto; /* Center horizontally on larger screens */
+    margin-right: auto; /* Center horizontally on larger screens */
+    margin-top: 100px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+    .box:hover input {
+        width: 500px;
+    }
+
+    .box input {
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: 0.8s;
+        background: transparent;
+    }
+
+
+@media (max-width: 768px) {
+    .box {
+        margin-left: 100px; /* Adjust margin for smaller screens */
+        margin-right: 100px; /* Adjust margin for smaller screens */
+    }
+
+
+        .box:hover input {
+            width: 100%; /* Full width on hover for smaller screens */
+        }
+}
+
+.title2 h1 {
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: chartreuse;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 80px;
+    margin-top: 50px;
+    position: relative;
+}
+
+    .container1 img {
+        width: 300px;
+    }
+
+    .container1 figure figcaption {
+        color: white;
+        font-size: larger;
+    }
+
+@media (max-width:1000px) {
+    .container1 {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .container1 {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+.contain {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.text-smaller {
+    font-size: 12px; /* Yazıyı daha küçük bir boyutta görüntülemek için uygun bir piksel değeri seçebilirsiniz */
+
+
+}
+
+.footer {
+    background-color: black;
+    padding: 30px 0;
+}
+
+    .footer .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+.footer-col {
+    flex-basis: calc(25% - 20px); /* 25% genişlikte, kenar boşlukları hariç */
+    margin-right: 20px;
+    width: auto;
+}
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: blueviolet;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: red;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/*Solution-Get tablosu için oluşturuldu.*/
+.table-hover tbody tr:hover {
+    background-color: orangered !important;
+}
+
+.card {
+    background-color: white;
+    transition: background-color 0.3s ease; /* Geçiş efekti ekle */
+}
+
+.card:hover {
+        background-color: darkred; /* Kartın rengini hover durumunda değiştir */
+}
